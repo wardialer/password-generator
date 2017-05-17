@@ -1,0 +1,6 @@
+#!/bin/bash
+
+LENGTH=$1
+CHARSET=$2
+
+echo `head /dev/urandom -n20 | tr -dc [:${CHARSET:-graph}:] | head -c${LENGTH:-8}`
