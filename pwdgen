@@ -1,13 +1,14 @@
 #!/bin/bash
 
-while getopts l:c: option
+while getopts l:c:n: option
 do
   case "${option}"
   in
   l) LENGTH=${OPTARG};;
   c) CHARSET=${OPTARG};;
+  n) NUMBER=${OPTARG};;
   esac
 done
 
 
-echo `head /dev/urandom -n20 | tr -dc [:${CHARSET:-graph}:] | head -c${LENGTH:-8}`
+head /dev/urandom -n20 | tr -dc [:${CHARSET:-graph}:] | fold -w${LENGTH:-8} | head -n${NUMBER:-1}
