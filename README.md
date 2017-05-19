@@ -3,13 +3,14 @@ simple utility to generate secure random passwords on linux
 
 ## usage
 ```bash 
-$ pwdgen [-l length] [-c charset]
+$ pwdgen [-l length] [-c charset] [-n number]
 ```
 
 ## arguments
-both arguments are optionals, defaults value are:
+all arguments are optionals, defaults value are:
 * LENGTH: 8
 * CHARSET: graph
+* NUMBER: 1
 
 typical options for CHARSET parameter are:
 * graph (all printable characters, not including space)
@@ -34,4 +35,10 @@ generating a 4 digits pin code:
 ```bash 
 $ pwdgen -l 4 -c digit
 > 6922
+```
+generating two passwords at the same time:
+```bash 
+$ pwdgen -n 2
+> +gGkqO+V
+>)"PBB{_i
 ```
