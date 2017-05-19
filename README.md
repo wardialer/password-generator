@@ -40,5 +40,5 @@ generating two passwords at the same time:
 ```bash 
 $ pwdgen -n 2
 > +gGkqO+V
->)"PBB{_i
+> )"PBB{_i
 ```
