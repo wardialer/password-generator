@@ -3,7 +3,7 @@ simple utility to generate secure random passwords on linux
 
 ## usage
 ```bash 
-$ pwdgen [length] [charset]
+$ pwdgen [-l length] [-c charset]
 ```
 
 ## arguments
@@ -20,18 +20,18 @@ typical options for CHARSET parameter are:
 ## examples
 generating a 10 characters complex password:
 ```bash 
-$ pwdgen 10
+$ pwdgen -l 10
 > L8#by77Hpo
 ```
 
 generating a 8 characters alphanumeric password:
 
 ```bash 
-$ pwdgen 8 alnum
+$ pwdgen -l 8 -c alnum
 > 0zxSLm4A
 ```
 generating a 4 digits pin code:
 ```bash 
-$ pwdgen 4 digit
+$ pwdgen -l 4 -c digit
 > 6922
 ```

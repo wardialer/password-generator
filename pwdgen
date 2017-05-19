@@ -1,6 +1,13 @@
 #!/bin/bash
 
-LENGTH=$1
-CHARSET=$2
+while getopts l:c: option
+do
+  case "${option}"
+  in
+  l) LENGTH=${OPTARG};;
+  c) CHARSET=${OPTARG};;
+  esac
+done
+
 
 echo `head /dev/urandom -n20 | tr -dc [:${CHARSET:-graph}:] | head -c${LENGTH:-8}`
