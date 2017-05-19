@@ -1,6 +1,8 @@
 # password-generator
 simple utility to generate secure random passwords on linux
 
+
+![screenshot](https://lh4.googleusercontent.com/zU1EYn5MqDOKB4NEXfoWdTXj9agcJPlyBk64atnOywqmi9a-wp3cEtXLXvkr8IBXMJfNLHkVlK6ootA=w1366-h675 "screenshot")
 ## usage
 ```bash 
 $ pwdgen [-l length] [-c charset] [-n number]
